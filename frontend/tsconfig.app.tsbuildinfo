@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/assets/svg/eyes.tsx","./src/assets/svg/flower.tsx","./src/assets/svg/graph.tsx","./src/assets/svg/hands.tsx","./src/assets/svg/phone.tsx","./src/assets/svg/robot.tsx","./src/assets/svg/scales.tsx","./src/assets/svg/socket.tsx","./src/assets/svg/star.tsx"],"version":"5.9.3"}
