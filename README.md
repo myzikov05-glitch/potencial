@@ -4,10 +4,10 @@ MVP-лендинг и backend-каркас для `potencore.ru`.
 
 Что внутри:
 
-- `frontend/` — React + Vite лендинг с формой заявки и блоком превью продукта
-- `backend/` — FastAPI API для healthcheck, сбора лидов, временной admin auth и AI-ready placeholder endpoints
-- `nginx/` — reverse proxy конфиг под `potencore.ru`
-- `docker-compose.yml` — локальный запуск через контейнеры
+- `frontend/` - React + Vite лендинг с формой заявки и блоком превью продукта
+- `backend/` - FastAPI API для healthcheck, сбора лидов, временной admin auth и AI-ready placeholder endpoints
+- `nginx/` - reverse proxy конфиг под `potencore.ru`
+- `docker-compose.yml` - локальный запуск через контейнеры
 
 ## Запуск локально
 
