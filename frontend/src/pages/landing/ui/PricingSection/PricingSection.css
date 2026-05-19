@@ -1,0 +1,140 @@
+.pricing-section {
+  padding: 84px 0 120px;
+}
+
+.pricing-title {
+  margin: 0 0 64px;
+  color: #f5f5f7;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  position: relative;
+  display: grid;
+  min-height: 315px;
+  max-height: 315px;
+  padding: 34px 36px 32px;
+  border: 1px solid #24252d;
+  border-radius: 18px;
+  background: rgba(5, 4, 13, 0.42);
+  transition: border-color 180ms ease;
+}
+
+.pricing-card-month:hover {
+  border-color: #00ff5f;
+}
+
+.pricing-card-year {
+  border-color: #00ff5f;
+}
+
+.pricing-card h3 {
+  margin: 0 0 18px;
+  color: #f5f5f7;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.pricing-price {
+  color: #00ff5f;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.pricing-price span {
+  color: var(--muted);
+  font-size: 1.45rem;
+  letter-spacing: 0;
+}
+
+.pricing-card ul {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 28px;
+  padding: 0;
+  color: #b5bac6;
+  list-style: none;
+  font-size: 1.16rem;
+}
+
+.pricing-card li::before {
+  content: "✓";
+  margin-right: 14px;
+  color: #00ff5f;
+}
+
+.pricing-button {
+  align-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border-radius: 12px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  transition: box-shadow 180ms ease;
+}
+
+.pricing-button-outline {
+  border: 2px solid #00ff5f;
+  color: #00ff5f;
+}
+
+.pricing-button-outline:hover {
+  background: #00ff5f;
+  color: #05040d;
+  box-shadow:
+    0 0 20px rgba(0, 255, 95, 0.45),
+    0 0 36px rgba(0, 255, 95, 0.28);
+}
+
+.pricing-button-filled {
+  background: #00ff5f;
+  color: #05040d;
+}
+
+.pricing-button-filled:hover {
+  box-shadow:
+    0 0 16px rgba(0, 255, 95, 0.38),
+    0 0 34px rgba(0, 255, 95, 0.26);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: #00ff5f;
+  color: #05040d;
+  font-weight: 600;
+}
+
+@media (max-width: 1080px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    padding: 20px;
+  }
+}
