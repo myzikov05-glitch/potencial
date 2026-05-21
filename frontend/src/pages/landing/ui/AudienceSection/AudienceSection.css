@@ -1,0 +1,75 @@
+.audience-section {
+  padding: 0 0 90px;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.audience-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 288px;
+  max-height: 288px;
+  padding: 24px 32px;
+  border: 1px solid #24252d;
+  border-radius: 18px;
+  background: rgba(5, 4, 13, 0.42);
+}
+
+.audience-card-green {
+  border-color: #00ff5f80;
+  background:
+    radial-gradient(circle at top left, rgba(0, 255, 95, 0.06), transparent 45%),
+    rgba(5, 4, 13, 0.42);
+}
+
+.audience-card-blue {
+  border-color: #06b5e080;
+  background:
+    radial-gradient(circle at top left, rgba(6, 181, 224, 0.06), transparent 45%),
+    rgba(5, 4, 13, 0.42);
+}
+
+.audience-card-lavender {
+  border-color: #b5c6f680;
+  background:
+    radial-gradient(circle at top left, rgba(181, 198, 246, 0.05), transparent 45%),
+    rgba(5, 4, 13, 0.42);
+}
+
+.audience-card h2 {
+  margin: 0 0 20px;
+  color: #f5f5f7;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.audience-card p {
+  max-width: 410px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (max-width: 1080px) {
+  .audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-card {
+    padding: 20px;
+  }
+}

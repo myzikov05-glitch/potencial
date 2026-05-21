@@ -1,0 +1,9 @@
+export { EyesIcon } from "./eyes";
+export { FlowerIcon } from "./flower";
+export { GraphIcon } from "./graph";
+export { HandsIcon } from "./hands";
+export { PhoneIcon } from "./phone";
+export { RobotIcon } from "./robot";
+export { ScalesIcon } from "./scales";
+export { SocketIcon } from "./socket";
+export { StarIcon } from "./star";

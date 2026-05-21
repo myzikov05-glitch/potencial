@@ -1,0 +1,25 @@
+.architecture-section {
+  margin-bottom: 90px;
+}
+
+.architecture-banner {
+  max-height: 131px;
+  padding: 30px 46px;
+  border: 1px solid rgba(0, 255, 95, 0.36);
+  border-radius: 18px;
+  background:
+    linear-gradient(100deg, rgba(0, 255, 95, 0.09), rgba(6, 181, 224, 0.08)),
+    rgba(7, 14, 22, 0.72);
+  color: #f5f5f7;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.55;
+  box-shadow: inset 0 0 0 1px rgba(181, 198, 246, 0.05);
+}
+
+@media (max-width: 720px) {
+  .architecture-banner {
+    padding: 20px;
+  }
+}

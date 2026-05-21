@@ -1,0 +1,98 @@
+.features-section {
+  padding: 28px 0 130px;
+}
+
+.features-heading {
+  margin: 0 0 72px;
+  color: #f5f5f7;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature-card {
+  background: none;
+  padding: 32px;
+  border: 1px solid #19191f;
+  border-radius: 12px;
+  min-height: 272px;
+  max-height: 272px;
+  transition: border-color 180ms ease;
+}
+
+.feature-card:nth-child(-n + 2):hover {
+  border-color: #00ff5f80;
+}
+
+.feature-card:nth-child(3):hover,
+.feature-card:nth-child(6):hover {
+  border-color: #06b5e080;
+}
+
+.feature-card:nth-child(4):hover,
+.feature-card:nth-child(5):hover {
+  border-color: #b5c6f680;
+}
+
+.feature-card h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+}
+
+.icon-chip svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2.4;
+}
+
+.benefit-icon-green {
+  color: #6dff7d;
+  background: rgba(0, 255, 95, 0.11);
+}
+
+.benefit-icon-blue {
+  color: #56c7ed;
+  background: rgba(6, 181, 224, 0.12);
+}
+
+.benefit-icon-lavender {
+  color: #b5c6f6;
+  background: rgba(181, 198, 246, 0.11);
+}
+
+@media (max-width: 1080px) {
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
