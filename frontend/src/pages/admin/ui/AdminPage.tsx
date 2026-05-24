@@ -240,6 +240,7 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
                   <span className="lead-status">{lead.status}</span>
                 </div>
                 <div className="lead-meta">
+                  {lead.phone && <span>{lead.phone}</span>}
                   <span>{lead.email}</span>
                   <span>{lead.team_size} чел.</span>
                   <span>{formatDate(lead.created_at)}</span>

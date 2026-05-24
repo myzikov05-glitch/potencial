@@ -4,7 +4,7 @@ export function getApiBaseUrl() {
   }
 
   if (window.location.hostname === "localhost" && window.location.port === "5173") {
-    return "http://localhost:8000/api/v1";
+    return "http://localhost/api/v1";
   }
 
   return "/api/v1";
