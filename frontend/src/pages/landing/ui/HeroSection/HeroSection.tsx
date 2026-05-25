@@ -1,7 +1,11 @@
 import heroImage from "../../../../assets/landing-hero.png";
 import "./HeroSection.css";
 
-export function HeroSection() {
+type HeroSectionProps = {
+  onPilotClick: () => void;
+};
+
+export function HeroSection({ onPilotClick }: HeroSectionProps) {
   return (
     <section className="container hero">
       <div className="hero-copy">
@@ -14,9 +18,9 @@ export function HeroSection() {
           Автоматическая аналитика эффективности команды, прогноз узких мест и AI-подсказки. Система сама подключается к инструментам, которые вы уже используете, и подсвечивает то, что не видно невооружённым взглядом: скрытую перегрузку, незаметную стагнацию, точки, где команде нужна помощь. Никаких опросов и ручного ввода - просто работайте, а мы поможем.
         </p>
         <div className="hero-actions">
-          <a className="button button-primary" href="#contact">
+          <button className="button button-primary" type="button" onClick={onPilotClick}>
             Попробовать пилотную версию
-          </a>
+          </button>
         </div>
       </div>
 

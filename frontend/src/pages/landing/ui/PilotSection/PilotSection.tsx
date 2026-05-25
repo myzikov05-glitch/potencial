@@ -1,6 +1,10 @@
 import "./PilotSection.css";
 
-export function PilotSection() {
+type PilotSectionProps = {
+  onPilotClick: () => void;
+};
+
+export function PilotSection({ onPilotClick }: PilotSectionProps) {
   return (
     <section className="container pilot-section">
       <div className="pilot-banner">
@@ -8,9 +12,9 @@ export function PilotSection() {
         <p>
           Подключите интеграции за 5 минут. PotenCore сразу покажет загрузку, риски и даст первые подсказки. Без опросов и ручного ввода.
         </p>
-        <a className="pilot-button" href="#contact">
+        <button className="pilot-button" type="button" onClick={onPilotClick}>
           Присоединиться
-        </a>
+        </button>
       </div>
     </section>
   );
