@@ -7,5 +7,5 @@ export default function App() {
   const apiBaseUrl = useMemo(() => getApiBaseUrl(), []);
   const isAdminRoute = window.location.pathname.startsWith("/admin");
 
-  return isAdminRoute ? <AdminPage apiBaseUrl={apiBaseUrl} /> : <LandingPage />;
+  return isAdminRoute ? <AdminPage apiBaseUrl={apiBaseUrl} /> : <LandingPage apiBaseUrl={apiBaseUrl} />;
 }
