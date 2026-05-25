@@ -1,0 +1,133 @@
+.workload-list {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.workload-card {
+  position: relative;
+  overflow: hidden;
+  margin-inline: auto;
+  width: min(100%, 640px);
+  padding: 14px;
+  border: 1px solid rgba(128, 138, 158, 0.25);
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.workload-card-danger {
+  border-color: rgba(255, 84, 78, 0.5);
+  background:
+    linear-gradient(110deg, rgba(95, 28, 22, 0.42), rgba(42, 15, 29, 0.6)),
+    rgba(15, 14, 22, 0.92);
+}
+
+.workload-card-success {
+  border-color: rgba(0, 255, 95, 0.5);
+  background:
+    linear-gradient(110deg, rgba(0, 255, 95, 0.16), rgba(24, 38, 32, 0.72)),
+    rgba(15, 14, 22, 0.92);
+}
+
+.workload-main,
+.feedback-row {
+  display: flex;
+  align-items: center;
+}
+
+.workload-main {
+  gap: 12px;
+}
+
+.member-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(197, 206, 224, 0.14);
+  border-radius: 50%;
+  background: rgba(74, 91, 78, 0.78);
+  color: #e9edf0;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.workload-card h3,
+.workload-card p {
+  margin: 0;
+}
+
+.workload-card h3 {
+  color: #e7e8ec;
+  font-size: 14px;
+}
+
+.workload-card strong {
+  display: block;
+  margin-top: 4px;
+  color: #66ff7a;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+}
+
+.workload-card-danger strong {
+  color: #ff625d;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: #4db55a;
+  box-shadow: 0 0 18px rgba(80, 255, 110, 0.72);
+}
+
+.workload-card-danger .status-dot {
+  background: #ff625d;
+  box-shadow: 0 0 18px rgba(255, 84, 78, 0.72);
+}
+
+.workload-warning,
+.workload-recommendation {
+  margin-top: 10px;
+  color: #b8b8bf;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.workload-divider {
+  height: 1px;
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.feedback-row {
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: #8f929c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.feedback-row button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  transform-origin: center;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.feedback-row button:hover,
+.feedback-row button:focus-visible {
+  filter: drop-shadow(0 0 10px rgba(102, 255, 122, 0.45));
+  transform: scale(1.28);
+}
