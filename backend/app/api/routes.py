@@ -43,9 +43,9 @@ def platform_overview() -> PlatformOverview:
         product_stage="Landing MVP + lead API + AI-ready architecture",
         integrations=["Jira", "GitHub/GitLab", "Telegram", "Calendar"],
         ai_status={
-            "enabled": False,
-            "mode": "placeholder",
-            "summary": "AI в MVP не активирован. Вместо этого заложены endpoint-ы и модульная архитектура под риск-скоринг, рекомендации и NLP.",
+            "enabled": True,
+            "mode": "descriptive",
+            "summary": "AI-аналитика активна: детерминированный движок считает загрузку, баланс, стагнацию и рекомендации по делегированию; LLM формулирует человеческие рекомендации поверх посчитанных чисел",
             "planned_modules": [
                 "risk-forecasting",
                 "task-allocation",
@@ -84,3 +84,5 @@ def list_leads(
     store: LeadStore = Depends(get_lead_store),
 ) -> list[LeadRecord]:
     return [LeadRecord(**lead) for lead in store.list_all()]
+
+

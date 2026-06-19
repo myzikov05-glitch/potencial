@@ -1,44 +1,4 @@
-import { Achievement, TaskColumn, WorkloadCard } from "./types";
-
-export const workloadCards: WorkloadCard[] = [
-  {
-    type: "danger",
-    initials: "ИВ",
-    name: "Иванов Петр",
-    load: "90%",
-    warning: "Перегруз из-за 3 сложных задач и 5 встреч сегодня",
-    recommendation:
-      "Иванов Петр перегружен (90%). Петрова Ксения свободна (45%) -> Петрова, можешь помочь Иванову с задачей \"Рефакторинг API\"?"
-  },
-  {
-    type: "danger",
-    initials: "СИ",
-    name: "Сидоров Алексей",
-    load: "88%",
-    warning: "Перегруз из-за 2 высокоприоритетных задач",
-    recommendation:
-      "Сидоров Алексей перегружен (88%). Денис К. свободна (55%) -> Денис, можешь помочь Сидорову с задачей \"Интеграция платежей\"?"
-  },
-  {
-    type: "success",
-    initials: "ПЕ",
-    name: "Петрова Анна",
-    load: "56%",
-    warning: "Ресурс свободен. Можно помочь коллеге"
-  },
-  {
-    type: "neutral",
-    initials: "ДЕ",
-    name: "Денис Кузнецов",
-    load: "55%"
-  },
-  {
-    type: "neutral",
-    initials: "СМ",
-    name: "Смирнова Елена",
-    load: "68%"
-  }
-];
+import { Achievement, TaskColumn } from "./types";
 
 export const achievements: Achievement[] = [
   {
@@ -56,12 +16,6 @@ export const achievements: Achievement[] = [
     meta: "Вся команда",
     detail: "Лучший результат за 2 месяца"
   }
-];
-
-export const actionItems = [
-  "Делегировать задачу «Рефакторинг API» от Иванова к Петровой",
-  "Дать Сидорову задачу «Интеграция GraphQL API»",
-  "Перенести важные задачи с пятницы на среду-четверг (низкая активность в пятницу)"
 ];
 
 export const taskColumns: TaskColumn[] = [

@@ -1,7 +1,11 @@
 import { Info, TrendingUp } from "lucide-react";
 import "./DashboardScoreCard.css";
 
-export function DashboardScoreCard() {
+type DashboardScoreCardProps = {
+  score: number;
+};
+
+export function DashboardScoreCard({ score }: DashboardScoreCardProps) {
   return (
     <section className="dashboard-score-card">
       <div className="dashboard-score-head">
@@ -13,7 +17,7 @@ export function DashboardScoreCard() {
         <span className="dashboard-source">📊 Jira + Git + Calendar</span>
       </div>
       <div className="dashboard-score">
-        <strong>87</strong>
+        <strong>{Math.round(score)}</strong>
         <span>/100</span>
       </div>
       <p>Средняя загрузка, баланс сложности и выполнение сроков</p>

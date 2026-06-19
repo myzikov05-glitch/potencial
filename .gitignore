@@ -9,6 +9,7 @@ dist/
 
 .env
 frontend/.env
+frontend/.env.local
 backend/.pytest_cache/
 backend/data/*.json
 !backend/data/.gitkeep

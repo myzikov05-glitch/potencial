@@ -1,7 +1,8 @@
 import { FormEvent, useEffect, useState } from "react";
 import { AdminSession, LoginFormState } from "../../../entities/session/model/types";
 import { ADMIN_STORAGE_KEY } from "../../../shared/config/auth";
-import { achievements, actionItems, taskColumns, workloadCards } from "../model/constants";
+import { achievements, taskColumns } from "../model/constants";
+import { useDashboard } from "../model/useDashboard";
 import { AchievementsSection } from "./AchievementsSection/AchievementsSection";
 import { ActionPanel } from "./ActionPanel/ActionPanel";
 import { AdminAuthCard } from "./AdminAuthCard/AdminAuthCard";
@@ -33,6 +34,7 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
   const [loginForm, setLoginForm] = useState<LoginFormState>(initialLoginForm);
   const [loginState, setLoginState] = useState<"idle" | "sending" | "error">("idle");
   const [authChecked, setAuthChecked] = useState(false);
+  const dashboard = useDashboard(apiBaseUrl, session?.access_token);
 
   useEffect(() => {
     async function validateExistingSession() {
@@ -103,18 +105,38 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
     );
   }
 
+  if (dashboard.status === "loading") {
+    return <AdminLoading />;
+  }
+
+  if (dashboard.status === "error" || !dashboard.data) {
+    return (
+      <div className="page-shell admin-dashboard-shell">
+        <main className="dashboard-page">
+          <DashboardHeader />
+          <p style={{ padding: "2rem", textAlign: "center" }}>
+            Не удалось загрузить аналитику. Проверьте, что backend запущен, и обновите страницу.
+          </p>
+        </main>
+        <DashboardBottomNav />
+      </div>
+    );
+  }
+
+  const { score, metrics, workload, action_items, help, ai_summary } = dashboard.data;
+
   return (
     <div className="page-shell admin-dashboard-shell">
       <div className="background-grid" />
       <main className="dashboard-page">
         <DashboardHeader />
-        <DashboardScoreCard />
-        <DashboardMetrics />
-        <WorkloadSection workloadCards={workloadCards} />
+        <DashboardScoreCard score={score.total} />
+        <DashboardMetrics metrics={metrics} />
+        <WorkloadSection workloadCards={workload} />
         <AchievementsSection achievements={achievements} />
-        <AiAnalyticsSection />
-        <ActionPanel actionItems={actionItems} />
-        <HelpSection />
+        <AiAnalyticsSection aiSummary={ai_summary} />
+        <ActionPanel actionItems={action_items.map((item) => item.text)} />
+        <HelpSection help={help} />
         <TaskBoard taskColumns={taskColumns} />
       </main>
       <DashboardBottomNav />

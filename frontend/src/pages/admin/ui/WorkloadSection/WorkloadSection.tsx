@@ -1,8 +1,8 @@
-import { WorkloadCard } from "../../model/types";
+import type { ApiWorkloadCard } from "../../model/analytics";
 import "./WorkloadSection.css";
 
 type WorkloadSectionProps = {
-  workloadCards: WorkloadCard[];
+  workloadCards: ApiWorkloadCard[];
 };
 
 export function WorkloadSection({ workloadCards }: WorkloadSectionProps) {
