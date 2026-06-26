@@ -15,7 +15,7 @@ export function DashboardHeader() {
         </div>
       </div>
       <button className="dashboard-telegram" type="button">
-        <Send size={22} />
+        <Send size={16} />
         Отправить сводку в Telegram
       </button>
     </header>

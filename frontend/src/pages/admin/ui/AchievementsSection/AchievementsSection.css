@@ -1,6 +1,6 @@
 .achievement-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   justify-items: center;
 }
 
@@ -9,8 +9,8 @@
   align-items: center;
   gap: 12px;
   margin-inline: auto;
-  width: min(100%, 640px);
-  padding: 12px 14px;
+  width: min(100%, 700px);
+  padding: 14px 16px;
   border: 1px solid rgba(0, 255, 95, 0.34);
   border-radius: 12px;
   background:
@@ -25,7 +25,7 @@
   width: 24px;
   height: 24px;
   flex: 0 0 auto;
-  color: #66ff7a;
+  color: #00ff5f;
   background: none;
 }
 
@@ -35,7 +35,9 @@
 }
 
 .achievement-card h3 {
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #e4e4e7;
 }
 
 .achievement-card p {
@@ -44,9 +46,10 @@
   margin-top: 6px;
   color: #8f929c;
   font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .achievement-card p strong {
-  color: #66ff7a;
+  color: #00ff5f;
+  font-weight: 400;
 }
