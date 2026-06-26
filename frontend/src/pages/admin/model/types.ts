@@ -28,3 +28,18 @@ export type TaskColumn = {
   tone: "muted" | "blue" | "green";
   tasks: TaskItem[];
 };
+
+export type AdminView = "dashboard" | "profile";
+
+export type ProfileStat = {
+  label: string;
+  value: string;
+  caption: string;
+  tone: "green" | "neutral";
+};
+
+export type ProfileRecommendation = {
+  tone: "success" | "warning" | "neutral";
+  title: string;
+  text: string;
+};

@@ -1,14 +1,19 @@
 import { LayoutGrid, Settings, TrendingUp, User } from "lucide-react";
+import type { AdminView } from "../../model/types";
 import "./DashboardBottomNav.css";
 
-export function DashboardBottomNav() {
+type DashboardBottomNavProps = {
+  activeView: AdminView;
+};
+
+export function DashboardBottomNav({ activeView }: DashboardBottomNavProps) {
   return (
     <nav className="dashboard-bottom-nav" aria-label="Админ навигация">
-      <a className="active" href="/admin">
+      <a className={activeView === "dashboard" ? "active" : undefined} href="/admin">
         <LayoutGrid size={28} />
         <span>Дашборд</span>
       </a>
-      <a href="/admin#profile">
+      <a className={activeView === "profile" ? "active" : undefined} href="/admin#profile">
         <User size={28} />
         <span>Профиль</span>
       </a>

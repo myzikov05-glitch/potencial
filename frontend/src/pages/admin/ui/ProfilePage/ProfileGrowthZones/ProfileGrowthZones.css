@@ -1,0 +1,48 @@
+.profile-growth-card {
+  padding: 18px;
+  border: 1px solid rgba(181, 198, 246, 0.34);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.profile-growth-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: #bdc9ff;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.profile-growth-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-growth-card li {
+  position: relative;
+  padding-left: 22px;
+  color: #e1e3e8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-growth-card li::before {
+  content: "";
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #bdc9ff;
+  box-shadow: 0 0 16px rgba(181, 198, 246, 0.42);
+}

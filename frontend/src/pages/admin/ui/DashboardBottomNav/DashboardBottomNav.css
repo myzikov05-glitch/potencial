@@ -10,7 +10,7 @@
   right: auto;
   bottom: 0;
   left: 50%;
-  width: min(100%, 640px);
+  width: min(100%, 700px);
   justify-content: center;
   gap: clamp(18px, 7vw, 68px);
   height: 58px;
