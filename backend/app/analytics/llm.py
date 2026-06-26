@@ -24,7 +24,7 @@ SYSTEM_PROMPT = """Ты ассистент тимлида. Тебе дают г�
 - Формат: 2-3 предложения, по делу, без воды.
 - Пиши на русском языке.
 Пример хорошего ответа:
-"Сотрудник A (backend) перегружен на 22% (загрузка 122%), а Сотрудник B (backend) недогружен (20%). Рекомендуется делегировать часть задач от A к B, чтобы выровнять загрузку."
+"Сотрудник A перегружен на 22% (загрузка 122%), а Сотрудник B недогружен (20%). Рекомендуется делегировать часть задач от Сотрудник A к Сотрудник B, чтобы выровнять загрузку."
 """
 
 USER_PROMPT_TEMPLATE = """На основе данных ниже сформулируй короткую рекомендацию для тимлида (2-3 предложения, на русском):
@@ -165,9 +165,9 @@ def generate_recommendation_text(
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": USER_PROMPT_TEMPLATE.format(summary=summary_text)}
             ],
-            temperature=0.3,
+            temperature=0.5,
             top_p=0.95,
-            max_tokens=300
+            max_tokens=600
         )
         
         result = completion.choices[0].message.content.strip()
@@ -186,7 +186,6 @@ def _generate_fallback_text_from_data(
     id_to_letter: Dict[str, str],
     person_data: Dict[str, Any]
 ) -> str:
-    """Генерирует fallback-текст из структуры данных, а не из текста"""
     recommendations = analytics_result.get('team', {}).get('recommendations', [])
     
     if not recommendations:

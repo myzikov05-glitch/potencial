@@ -5,7 +5,7 @@ from pathlib import Path
 
 SEED = 42  
 
-WEEKS = 5  
+WEEKS = 16
 START_MONDAY = datetime(2026, 5, 4)  
 
 OUTPUT_FILE = Path("data/synthetic_events.json")  

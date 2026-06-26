@@ -163,12 +163,7 @@ def _deobfuscate(text: str, id_to_letter: dict, names: dict) -> str:
         letter: names.get(pid, pid) for pid, letter in id_to_letter.items()
     }
     for letter, name in letter_to_name.items():
-        text = text.replace(f"Сотрудник {letter}", name)
-        text = text.replace(f"сотрудник {letter}", name)
-        text = re.sub(rf"\bот {letter}\b", f"от {name}", text)
-        text = re.sub(rf"\bк {letter}\b", f"к {name}", text)
-        text = re.sub(rf"\bмежду {letter}\b", f"между {name}", text)
-        text = re.sub(rf"\bи {letter}\b", f"и {name}", text)
+        text = re.sub(rf"[Сс]отрудник\w*\s+{letter}\b", name, text)
     return text
 
 

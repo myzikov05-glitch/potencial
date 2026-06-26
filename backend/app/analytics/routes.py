@@ -9,6 +9,7 @@ from app.analytics.engine import build_team_analytics
 from app.analytics.schemas import DashboardResponse
 from app.schemas import AdminUser
 from app.services.auth import require_admin
+from app.analytics.predictive import get_predictions_from_saved
 
 router_ml = APIRouter(prefix="/api/v1/analytics")
 
@@ -50,3 +51,18 @@ def dashboard_refresh(_: AdminUser = Depends(require_admin)) -> dict:
     _CACHE.clear()
     _CACHE[_data_fingerprint()] = result
     return result
+
+@router_ml.get("/predictions")
+def predictions(_: AdminUser = Depends(require_admin)) -> dict:
+    preds = get_predictions_from_saved()
+    if preds is None:
+        return {
+            "status": "model_not_trained",
+            "message": "Прогнозная модель ещё не обучена. Запустите train_and_save().",
+            "predictions": [],
+        }
+
+    return {
+        "status": "ok",
+        "predictions": preds,
+    }
