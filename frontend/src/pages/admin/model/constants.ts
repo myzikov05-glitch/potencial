@@ -1,4 +1,13 @@
-import type { Achievement, ProfileRecommendation, ProfileStat, TaskColumn, WorkloadCard, ForecastRisk } from "./types";
+import type {
+  Achievement,
+  ForecastRisk,
+  IntegrationItem,
+  NotificationSetting,
+  ProfileRecommendation,
+  ProfileStat,
+  TaskColumn,
+  WorkloadCard
+} from "./types";
 
 export const workloadCards: WorkloadCard[] = [
   {
@@ -195,5 +204,39 @@ export const profileRecommendations: ProfileRecommendation[] = [
     tone: "neutral",
     title: "У вас есть свободное время (45% загрузка) - можете помочь коллегам",
     text: "Иван Иванов перегружен задачей \"Интеграция платежей\" - ваша экспертиза подходит"
+  }
+];
+
+export const integrationItems: IntegrationItem[] = [
+  { icon: "🔷", name: "Jira", sync: "сегодня в 18:45", status: "connected" },
+  { icon: "🐙", name: "GitHub", sync: "сегодня в 18:43", status: "connected" },
+  { icon: "📅", name: "Google Calendar", sync: "сегодня в 18:40", status: "connected" },
+  { icon: "✈️", name: "Telegram", sync: "сегодня в 18:47", status: "connected" },
+  { icon: "🔴", name: "Yandex 360", status: "available" },
+  { icon: "💼", name: "VK WorkSpace", status: "available" },
+  { icon: "🔧", name: "Битрикс24", status: "available" },
+  { icon: "🎯", name: "YouTrack", status: "available" }
+];
+
+export const notificationSettings: NotificationSetting[] = [
+  {
+    title: "Критическая загрузка",
+    description: "При загрузке >85% у участника",
+    enabled: true
+  },
+  {
+    title: "Прогнозы",
+    description: "Риски спринта и дедлайнов",
+    enabled: true
+  },
+  {
+    title: "Ежедневный отчёт",
+    description: "Сводка в 20:00",
+    enabled: true
+  },
+  {
+    title: "Запросы помощи от коллег",
+    description: "Уведомлять, когда коллега просит помощи",
+    enabled: true
   }
 ];

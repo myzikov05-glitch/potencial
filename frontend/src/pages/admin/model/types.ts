@@ -29,7 +29,7 @@ export type TaskColumn = {
   tasks: TaskItem[];
 };
 
-export type AdminView = "dashboard" | "profile" | "forecasts";
+export type AdminView = "dashboard" | "profile" | "forecasts" | "settings";
 
 export type ForecastRisk = {
   tone: "high" | "medium" | "low";
@@ -50,4 +50,17 @@ export type ProfileRecommendation = {
   tone: "success" | "warning" | "neutral";
   title: string;
   text: string;
+};
+
+export type IntegrationItem = {
+  icon: string;
+  name: string;
+  sync?: string;
+  status: "connected" | "available";
+};
+
+export type NotificationSetting = {
+  title: string;
+  description: string;
+  enabled: boolean;
 };

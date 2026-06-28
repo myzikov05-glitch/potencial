@@ -1,0 +1,65 @@
+.settings-invite-card,
+.settings-team-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 76px;
+  padding: 18px;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.settings-invite-card {
+  gap: 14px;
+  border: 1px solid rgba(0, 255, 95, 0.45);
+  color: #00ff5f;
+  cursor: pointer;
+  text-align: left;
+}
+
+.settings-invite-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(0, 255, 95, 0.18);
+}
+
+.settings-invite-card span:nth-child(2),
+.settings-team-card span {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.settings-invite-card strong,
+.settings-team-card strong {
+  color: #f1f2f5;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.settings-invite-card small,
+.settings-team-card small {
+  color: #8f929c;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.settings-invite-card > svg {
+  margin-left: auto;
+}
+
+.settings-team-card {
+  justify-content: space-between;
+  border: 1px solid rgba(128, 138, 158, 0.25);
+}
+
+.settings-team-card b {
+  color: #00ff5f;
+  font-size: 18px;
+}
