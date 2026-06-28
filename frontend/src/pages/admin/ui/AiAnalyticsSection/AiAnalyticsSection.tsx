@@ -1,7 +1,11 @@
 import { Sparkles, TrendingUp, Users } from "lucide-react";
 import "./AiAnalyticsSection.css";
 
-export function AiAnalyticsSection() {
+type AiAnalyticsSectionProps = {
+  aiSummary?: string;
+};
+
+export function AiAnalyticsSection({ aiSummary }: AiAnalyticsSectionProps) {
   return (
     <section className="dashboard-section ai-section">
       <h2 className="ai-heading">
@@ -35,6 +39,12 @@ export function AiAnalyticsSection() {
         AI-выводы по команде
       </h2>
 
+      {aiSummary && (
+        <article className="insight-card insight-danger">
+          <h3>🤖 Рекомендация по балансировке</h3>
+          <p>{aiSummary}</p>
+        </article>
+      )}
       <article className="insight-card insight-danger">
         <h3>⚠️ Перегрузка требует действий</h3>
         <p>

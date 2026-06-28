@@ -1,8 +1,9 @@
 import { FormEvent, useEffect, useState } from "react";
 import { AdminSession, LoginFormState } from "../../../entities/session/model/types";
 import { ADMIN_STORAGE_KEY } from "../../../shared/config/auth";
-import { achievements, actionItems, taskColumns, workloadCards } from "../model/constants";
+import { achievements, taskColumns } from "../model/constants";
 import type { AdminView } from "../model/types";
+import { useDashboard } from "../model/useDashboard";
 import { AchievementsSection } from "./AchievementsSection/AchievementsSection";
 import { ActionPanel } from "./ActionPanel/ActionPanel";
 import { AdminAuthCard } from "./AdminAuthCard/AdminAuthCard";
@@ -49,6 +50,7 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
   const [loginState, setLoginState] = useState<"idle" | "sending" | "error">("idle");
   const [authChecked, setAuthChecked] = useState(false);
   const [activeView, setActiveView] = useState<AdminView>(getActiveAdminView);
+  const dashboard = useDashboard(apiBaseUrl, session?.access_token);
 
   useEffect(() => {
     async function validateExistingSession() {
@@ -128,6 +130,26 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
     );
   }
 
+  if (activeView === "dashboard" && dashboard.status === "loading") {
+    return <AdminLoading />;
+  }
+
+  if (activeView === "dashboard" && dashboard.status === "error") {
+    return (
+      <div className="page-shell admin-dashboard-shell">
+        <div className="background-grid" />
+        <main className="dashboard-page">
+          <section className="dashboard-section">
+            <h2 className="dashboard-section-title">Не удалось загрузить аналитику</h2>
+          </section>
+        </main>
+        <DashboardBottomNav activeView={activeView} />
+      </div>
+    );
+  }
+
+  const dashboardData = dashboard.data;
+
   return (
     <div className="page-shell admin-dashboard-shell">
       <div className="background-grid" />
@@ -136,16 +158,23 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
           <ForecastsPage />
         ) : activeView === "profile" ? (
           <ProfilePage />
+        ) : dashboardData ? (
+          <>
+            <DashboardHeader />
+            <DashboardScoreCard score={dashboardData.score.total} />
+            <DashboardMetrics metrics={dashboardData.metrics} />
+            <WorkloadSection workloadCards={dashboardData.workload} />
+            <AchievementsSection achievements={achievements} />
+            <AiAnalyticsSection />
+            <ActionPanel actionItems={dashboardData.action_items.map((item) => item.text)} />
+            <HelpSection help={dashboardData.help} />
+            <TaskBoard taskColumns={taskColumns} />
+          </>
         ) : (
           <>
             <DashboardHeader />
-            <DashboardScoreCard />
-            <DashboardMetrics />
-            <WorkloadSection workloadCards={workloadCards} />
             <AchievementsSection achievements={achievements} />
             <AiAnalyticsSection />
-            <ActionPanel actionItems={actionItems} />
-            <HelpSection />
             <TaskBoard taskColumns={taskColumns} />
           </>
         )}

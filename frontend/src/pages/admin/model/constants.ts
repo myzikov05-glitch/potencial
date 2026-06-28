@@ -58,12 +58,6 @@ export const achievements: Achievement[] = [
   }
 ];
 
-export const actionItems = [
-  "Делегировать задачу «Рефакторинг API» от Иванова к Петровой",
-  "Дать Сидорову задачу «Интеграция GraphQL API»",
-  "Перенести важные задачи с пятницы на среду-четверг (низкая активность в пятницу)"
-];
-
 export const taskColumns: TaskColumn[] = [
   {
     title: "К выполнению",
