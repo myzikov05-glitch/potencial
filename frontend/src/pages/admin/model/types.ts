@@ -29,7 +29,7 @@ export type TaskColumn = {
   tasks: TaskItem[];
 };
 
-export type AdminView = "dashboard" | "forecasts";
+export type AdminView = "dashboard" | "profile" | "forecasts";
 
 export type ForecastRisk = {
   tone: "high" | "medium" | "low";
@@ -37,4 +37,17 @@ export type ForecastRisk = {
   description: string;
   recommendation: string;
   source: string;
+};
+
+export type ProfileStat = {
+  label: string;
+  value: string;
+  caption: string;
+  tone: "green" | "neutral";
+};
+
+export type ProfileRecommendation = {
+  tone: "success" | "warning" | "neutral";
+  title: string;
+  text: string;
 };

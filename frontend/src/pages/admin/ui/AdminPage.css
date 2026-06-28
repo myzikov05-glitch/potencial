@@ -25,10 +25,10 @@
   gap: 8px;
   width: 100%;
   margin: 0 0 14px;
-  padding: 8px 0 8px max(0px, calc((100% - 640px) / 2));
+  padding: 10px 0 10px max(0px, calc((100% - 700px) / 2));
   color: #f1f2f5;
   font-size: 16px;
-  letter-spacing: -0.02em;
+  font-weight: 500;
 }
 
 .muted-title {
@@ -36,4 +36,5 @@
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-top: 12px;
 }

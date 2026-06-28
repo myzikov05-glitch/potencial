@@ -10,7 +10,7 @@
   right: auto;
   bottom: 0;
   left: 50%;
-  width: min(100%, 640px);
+  width: min(100%, 700px);
   justify-content: center;
   gap: clamp(18px, 7vw, 68px);
   height: 58px;
@@ -34,7 +34,7 @@
 }
 
 .dashboard-bottom-nav a.active {
-  color: #66ff7a;
+  color: #00ff5f;
   text-shadow: 0 0 22px rgba(0, 255, 95, 0.55);
 }
 
@@ -45,6 +45,6 @@
   width: 34px;
   height: 3px;
   border-radius: 999px;
-  background: #66ff7a;
+  background: #00ff5f;
   box-shadow: 0 0 28px rgba(0, 255, 95, 0.9);
 }

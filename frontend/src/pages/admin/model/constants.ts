@@ -1,4 +1,4 @@
-import type { Achievement, ForecastRisk, TaskColumn, WorkloadCard } from "./types";
+import type { Achievement, ProfileRecommendation, ProfileStat, TaskColumn, WorkloadCard, ForecastRisk } from "./types";
 
 export const workloadCards: WorkloadCard[] = [
   {
@@ -164,4 +164,42 @@ export const forecastRecommendations = [
   "Снизить объём работы на 2 задачи низкого приоритета",
   "Переназначить задачу «Интеграция платежей» с Иванова на Петрову",
   "Провести sync-up с командой бэкенда - проверить загрузку и блокеры"
+];
+export const profileStats: ProfileStat[] = [
+  {
+    label: "Моя загрузка",
+    value: "45%",
+    caption: "Ресурс свободен",
+    tone: "green"
+  },
+  {
+    label: "Выполнено в срок",
+    value: "95%",
+    caption: "Отличный результат",
+    tone: "neutral"
+  }
+];
+
+export const profileGrowthZones = [
+  "Backend интеграции - не осваивала 2 месяца",
+  "Архитектурное проектирование",
+  "GraphQL - новая технология"
+];
+
+export const profileRecommendations: ProfileRecommendation[] = [
+  {
+    tone: "success",
+    title: "Вы берёте задачи средней сложности - попробуйте следующую сложнее",
+    text: "Рекомендуем задачу \"Интеграция GraphQL API\" - сложность +20%, плавное повышение навыков"
+  },
+  {
+    tone: "warning",
+    title: "У вас много встреч (12 в неделю) - попробуйте заблокировать 2 часа в день на глубокую работу",
+    text: "Это поможет сконцентрироваться на сложных задачах без отвлечений"
+  },
+  {
+    tone: "neutral",
+    title: "У вас есть свободное время (45% загрузка) - можете помочь коллегам",
+    text: "Иван Иванов перегружен задачей \"Интеграция платежей\" - ваша экспертиза подходит"
+  }
 ];

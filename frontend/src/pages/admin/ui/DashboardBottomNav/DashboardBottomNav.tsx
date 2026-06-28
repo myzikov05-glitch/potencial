@@ -13,7 +13,7 @@ export function DashboardBottomNav({ activeView }: DashboardBottomNavProps) {
         <LayoutGrid size={28} />
         <span>Дашборд</span>
       </a>
-      <a href="/admin#profile">
+      <a className={activeView === "profile" ? "active" : undefined} href="/admin#profile">
         <User size={28} />
         <span>Профиль</span>
       </a>

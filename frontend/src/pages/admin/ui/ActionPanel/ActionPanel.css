@@ -1,7 +1,7 @@
 .action-panel {
-  width: min(100%, 640px);
-  margin: 18px auto 0;
-  padding: 14px;
+  width: min(100%, 700px);
+  margin: 20px auto 0;
+  padding: 16px;
   border: 1px solid rgba(0, 255, 95, 0.34);
   border-radius: 14px;
   background:
@@ -15,7 +15,7 @@
   gap: 8px;
   align-items: center;
   margin: 0 0 12px;
-  color: #66ff7a;
+  color: #00ff5f;
   font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -23,7 +23,7 @@
 
 .action-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   justify-items: center;
   font-weight: 400;
   font-size: 16px;
@@ -34,8 +34,8 @@
   grid-template-columns: 30px 1fr;
   gap: 12px;
   margin-inline: auto;
-  width: min(100%, 640px);
-  padding: 12px;
+  width: min(100%, 700px);
+  padding: 14px;
   border: 1px solid rgba(128, 138, 158, 0.25);
   border-radius: 12px;
   background:
@@ -51,7 +51,7 @@
   height: 28px;
   border-radius: 50%;
   background: rgba(0, 255, 95, 0.24);
-  color: #66ff7a;
+  color: #00ff5f;
   font-size: 15px;
   font-weight: 900;
 }
@@ -59,18 +59,18 @@
 .action-card p {
   margin: 0;
   color: #d9dade;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .action-card button {
   margin-top: 10px;
   padding: 8px 14px;
-  border: 1px solid rgba(0, 255, 95, 0.34);
+  border: 1px solid #00ff5f;
   border-radius: 10px;
   background: rgba(0, 255, 95, 0.16);
-  color: #66ff7a;
+  color: #00ff5f;
   cursor: pointer;
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 400;
 }
