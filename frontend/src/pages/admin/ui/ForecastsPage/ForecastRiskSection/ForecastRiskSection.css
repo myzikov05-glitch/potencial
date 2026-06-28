@@ -1,0 +1,114 @@
+.forecast-risk-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: #f1f2f5;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.forecast-risk-section-danger h2 svg {
+  color: #ef4444;
+}
+
+.forecast-risk-section-info h2 svg {
+  color: #18c7ef;
+}
+
+.forecast-risk-list {
+  display: grid;
+  gap: 14px;
+}
+
+.forecast-risk-card {
+  padding: 20px;
+  border: 1px solid rgba(128, 138, 158, 0.25);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.forecast-risk-high {
+  border-color: rgba(255, 84, 78, 0.46);
+  background:
+    radial-gradient(circle at 16% 26%, rgba(255, 84, 78, 0.1), transparent 32%),
+    rgba(12, 13, 20, 0.84);
+}
+
+.forecast-risk-medium {
+  border-color: rgba(255, 174, 57, 0.46);
+  background:
+    radial-gradient(circle at 16% 26%, rgba(255, 174, 57, 0.1), transparent 32%),
+    rgba(12, 13, 20, 0.84);
+}
+
+.forecast-risk-low {
+  border-color: rgba(24, 199, 239, 0.46);
+  background:
+    radial-gradient(circle at 16% 26%, rgba(24, 199, 239, 0.1), transparent 32%),
+    rgba(12, 13, 20, 0.84);
+}
+
+.forecast-risk-level {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.forecast-risk-high .forecast-risk-level {
+  color: #ef4444;
+}
+
+.forecast-risk-medium .forecast-risk-level {
+  color: #f59e0b;
+}
+
+.forecast-risk-low .forecast-risk-level {
+  color: #18c7ef;
+}
+
+.forecast-risk-card h3,
+.forecast-risk-card p {
+  margin: 0;
+}
+
+.forecast-risk-card h3 {
+  margin-top: 12px;
+  color: #f1f2f5;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.forecast-risk-card p {
+  margin-top: 10px;
+  color: #8f929c;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.forecast-risk-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.forecast-risk-card b {
+  display: block;
+  color: #00ff5f;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.forecast-risk-card small {
+  display: block;
+  margin-top: 12px;
+  color: rgba(184, 188, 198, 0.55);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+}

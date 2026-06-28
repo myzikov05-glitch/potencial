@@ -52,39 +52,9 @@
 }
 
 .metric-warn {
-  color: #ffae39;
+  color: #f59e0b;
 }
 
 .metric-blue {
   color: #58c6f0;
-}
-
-@media (max-width: 900px) {
-  .dashboard-metrics {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .dashboard-metric-card {
-    grid-template-columns: minmax(68px, auto) 1fr;
-    align-items: center;
-    gap: 4px 14px;
-    min-height: 74px;
-    padding: 13px 15px;
-    border-radius: 12px;
-  }
-
-  .dashboard-metric-card strong {
-    grid-row: span 3;
-    font-size: 25px;
-  }
-
-  .dashboard-metric-card span {
-    font-size: 13px;
-  }
-
-  .dashboard-metric-card small,
-  .dashboard-metric-card b {
-    font-size: 11px;
-  }
 }

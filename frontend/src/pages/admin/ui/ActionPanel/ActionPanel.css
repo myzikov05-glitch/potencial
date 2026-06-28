@@ -74,15 +74,3 @@
   font-size: 13px;
   font-weight: 400;
 }
-
-@media (max-width: 900px) {
-  .action-panel {
-    padding: 14px;
-  }
-}
-
-@media (max-width: 560px) {
-  .action-panel h2 {
-    font-size: 14px;
-  }
-}

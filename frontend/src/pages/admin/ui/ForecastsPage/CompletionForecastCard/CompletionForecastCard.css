@@ -1,0 +1,71 @@
+.completion-forecast-card {
+  padding: 26px;
+  border: 1px solid rgba(255, 174, 57, 0.42);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 72% 20%, rgba(255, 174, 57, 0.12), transparent 32%),
+    linear-gradient(135deg, rgba(86, 53, 17, 0.28), rgba(16, 16, 24, 0.92));
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.completion-forecast-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #f59e0b;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.completion-forecast-value {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.completion-forecast-value strong {
+  color: #f59e0b;
+  font-size: 54px;
+  line-height: 0.95;
+}
+
+.completion-forecast-value span,
+.completion-forecast-card p {
+  color: #71717a;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.completion-forecast-card p {
+  margin: 18px 0 0;
+  color: #e4e4e7;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.completion-progress {
+  height: 12px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(181, 198, 246, 0.08);
+}
+
+.completion-progress span {
+  display: block;
+  width: 78%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff4d45, #f59e0b 38%, #00ff5f);
+}
+
+.completion-forecast-card small {
+  display: block;
+  margin-top: 14px;
+  color: rgba(184, 188, 198, 0.55);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+}

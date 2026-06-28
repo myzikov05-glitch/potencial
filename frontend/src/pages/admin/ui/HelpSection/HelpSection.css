@@ -46,7 +46,7 @@
 }
 
 .help-danger h3 {
-  color: #ff625d;
+  color: #ef4444;
 }
 
 .help-review h3 {
@@ -111,11 +111,4 @@
   height: 8px;
   flex: 0 0 8px;
   border-radius: 50%;
-}
-
-@media (max-width: 900px) {
-  .help-row {
-    align-items: flex-start;
-    flex-direction: column;
-  }
 }

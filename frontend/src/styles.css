@@ -338,28 +338,3 @@ h2 {
     transform: rotate(360deg);
   }
 }
-
-@media (max-width: 1080px) {
-  .admin-summary-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .container {
-    width: min(100% - 28px, 1180px);
-  }
-
-  .admin-summary-grid,
-  .admin-form {
-    grid-template-columns: 1fr;
-  }
-
-  .admin-header,
-  .lead-card-head,
-  .lead-meta,
-  .admin-leads-head {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}

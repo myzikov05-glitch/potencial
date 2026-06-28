@@ -84,15 +84,3 @@
   color: #b5c6f6;
   background: rgba(181, 198, 246, 0.11);
 }
-
-@media (max-width: 1080px) {
-  .features {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .features {
-    grid-template-columns: 1fr;
-  }
-}

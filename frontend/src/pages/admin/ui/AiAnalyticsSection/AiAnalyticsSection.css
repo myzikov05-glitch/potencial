@@ -98,7 +98,7 @@
 }
 
 .risk-note strong {
-  color: #ffae39;
+  color: #f59e0b;
 }
 
 .forecast-card > .dashboard-source {
@@ -141,11 +141,11 @@
 }
 
 .insight-danger h3 {
-  color: #ff625d;
+  color: #ef4444;
 }
 
 .insight-warning h3 {
-  color: #ffae39;
+  color: #f59e0b;
 }
 
 .insight-success h3 {
@@ -184,23 +184,3 @@
   color: #8f929c !important;
 }
 
-@media (max-width: 900px) {
-  .forecast-card,
-  .insight-card {
-    padding: 14px;
-  }
-}
-
-@media (max-width: 560px) {
-  .forecast-card h3 {
-    font-size: 14px;
-  }
-
-  .forecast-value span {
-    font-size: 13px;
-  }
-
-  .forecast-value strong {
-    font-size: 26px;
-  }
-}

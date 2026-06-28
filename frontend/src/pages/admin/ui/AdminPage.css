@@ -38,10 +38,3 @@
   text-transform: uppercase;
   margin-top: 12px;
 }
-
-@media (max-width: 900px) {
-  .dashboard-page {
-    width: min(100% - 28px, 640px);
-    padding-top: 20px;
-  }
-}

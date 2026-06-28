@@ -12,6 +12,7 @@ import { DashboardBottomNav } from "./DashboardBottomNav/DashboardBottomNav";
 import { DashboardHeader } from "./DashboardHeader/DashboardHeader";
 import { DashboardMetrics } from "./DashboardMetrics/DashboardMetrics";
 import { DashboardScoreCard } from "./DashboardScoreCard/DashboardScoreCard";
+import { ForecastsPage } from "./ForecastsPage/ForecastsPage";
 import { HelpSection } from "./HelpSection/HelpSection";
 import { ProfilePage } from "./ProfilePage/ProfilePage";
 import { TaskBoard } from "./TaskBoard/TaskBoard";
@@ -24,7 +25,15 @@ const initialLoginForm: LoginFormState = {
 };
 
 function getActiveAdminView(): AdminView {
-  return window.location.hash === "#profile" ? "profile" : "dashboard";
+  if (window.location.hash === "#profile") {
+    return "profile";
+  }
+
+  if (window.location.hash === "#forecasts") {
+    return "forecasts";
+  }
+
+  return "dashboard";
 }
 
 type AdminPageProps = {
@@ -123,7 +132,9 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
     <div className="page-shell admin-dashboard-shell">
       <div className="background-grid" />
       <main className="dashboard-page">
-        {activeView === "profile" ? (
+        {activeView === "forecasts" ? (
+          <ForecastsPage />
+        ) : activeView === "profile" ? (
           <ProfilePage />
         ) : (
           <>

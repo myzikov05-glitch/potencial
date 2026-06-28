@@ -122,19 +122,3 @@
   color: #05040d;
   font-weight: 600;
 }
-
-@media (max-width: 1080px) {
-  .pricing-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-card {
-    padding: 20px;
-  }
-}

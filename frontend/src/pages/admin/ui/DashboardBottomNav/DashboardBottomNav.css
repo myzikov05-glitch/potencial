@@ -48,17 +48,3 @@
   background: #00ff5f;
   box-shadow: 0 0 28px rgba(0, 255, 95, 0.9);
 }
-
-@media (max-width: 900px) {
-  .dashboard-bottom-nav {
-    gap: 0;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width: 560px) {
-  .dashboard-bottom-nav a {
-    min-width: auto;
-    font-size: 9px;
-  }
-}
