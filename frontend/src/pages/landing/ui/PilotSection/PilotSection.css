@@ -56,14 +56,3 @@
     0 0 18px rgba(0, 255, 95, 0.42),
     0 0 40px rgba(0, 255, 95, 0.28);
 }
-
-@media (max-width: 720px) {
-  .pilot-banner {
-    padding: 20px;
-  }
-
-  .pilot-button {
-    width: 100%;
-    min-width: 0;
-  }
-}

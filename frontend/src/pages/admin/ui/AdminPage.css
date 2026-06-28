@@ -37,10 +37,3 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
-@media (max-width: 900px) {
-  .dashboard-page {
-    width: min(100% - 28px, 640px);
-    padding-top: 20px;
-  }
-}

@@ -59,26 +59,3 @@
   cursor: pointer;
   box-shadow: 0 0 26px rgba(6, 181, 224, 0.12);
 }
-
-@media (max-width: 900px) {
-  .dashboard-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .dashboard-telegram {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 560px) {
-  .dashboard-team h1 {
-    font-size: 17px;
-  }
-
-  .dashboard-team p,
-  .dashboard-telegram {
-    font-size: 13px;
-  }
-}

@@ -1,4 +1,4 @@
-import { Achievement, TaskColumn, WorkloadCard } from "./types";
+import type { Achievement, ForecastRisk, TaskColumn, WorkloadCard } from "./types";
 
 export const workloadCards: WorkloadCard[] = [
   {
@@ -124,4 +124,44 @@ export const taskColumns: TaskColumn[] = [
       }
     ]
   }
+];
+
+export const operationalRisks: ForecastRisk[] = [
+  {
+    tone: "high",
+    title: "Прогноз выполнения спринта: 78%",
+    description: "При текущем темпе команда не закроет все задачи",
+    recommendation: "Уберите 2 задачи низкого приоритета или добавьте ресурс",
+    source: "Jira velocity + current progress"
+  },
+  {
+    tone: "high",
+    title: "Задача «Интеграция платежей» под риском",
+    description: "Вероятность срыва дедлайна 75% из-за перегрузки исполнителя",
+    recommendation: "Переназначьте задачу или добавьте второго разработчика",
+    source: "Jira task + assignee load"
+  }
+];
+
+export const communicationRisks: ForecastRisk[] = [
+  {
+    tone: "medium",
+    title: "Команда бэкенда отвечает медленнее на 40%",
+    description: "Среднее время ответа выросло с 15 мин до 35 мин",
+    recommendation: "Проверьте загрузку команды - возможна перегрузка",
+    source: "Telegram message metadata"
+  },
+  {
+    tone: "low",
+    title: "Снижение взаимодействия Иванов-Петрова",
+    description: "Коммуникация упала на 60% за последнюю неделю",
+    recommendation: "Проверьте, нет ли конфликта или блокера в задачах",
+    source: "Telegram + Jira comments"
+  }
+];
+
+export const forecastRecommendations = [
+  "Снизить объём работы на 2 задачи низкого приоритета",
+  "Переназначить задачу «Интеграция платежей» с Иванова на Петрову",
+  "Провести sync-up с командой бэкенда - проверить загрузку и блокеры"
 ];

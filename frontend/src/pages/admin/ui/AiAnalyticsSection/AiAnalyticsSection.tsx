@@ -24,7 +24,7 @@ export function AiAnalyticsSection() {
         </div>
         <div className="forecast-note risk-note">
           <strong>Риск:</strong>
-          <span>Пятница — традиционный спад активности на 30% (по данным за 4 недели)</span>
+          <span>Пятница - традиционный спад активности на 30% (по данным за 4 недели)</span>
           <small>💡 Рекомендуем перенести важные задачи на среду-четверг</small>
         </div>
         <p className="dashboard-source">📊 Анализ на основе Jira + Git + Calendar за 4 недели</p>
@@ -45,7 +45,7 @@ export function AiAnalyticsSection() {
           Делегировать задачу "Рефакторинг API" Петровой (у неё загрузка 45%, есть опыт)
         </div>
         <p className="effect-line">
-          <strong>Эффект:</strong> загрузка Иванова снизится до 65%, Петрова вырастет до 65% — баланс восстановится
+          <strong>Эффект:</strong> загрузка Иванова снизится до 65%, Петрова вырастет до 65% - баланс восстановится
         </p>
       </article>
 
@@ -57,7 +57,7 @@ export function AiAnalyticsSection() {
         </p>
         <div className="insight-recommendation">
           <strong>💡 Рекомендация:</strong>
-          Задача "Интеграция GraphQL API" (сложность +25%) — плавное повышение без стресса
+          Задача "Интеграция GraphQL API" (сложность +25%) - плавное повышение без стресса
         </div>
         <p className="effect-line">
           <strong>Эффект:</strong> развитие навыков, повышение мотивации, рост сложности задач
@@ -67,8 +67,8 @@ export function AiAnalyticsSection() {
       <article className="insight-card insight-success">
         <h3>🤝 Коммуникация и помощь</h3>
         <p>
-          <strong>Петрова — лучший помощник:</strong> помогла команде 4 раза за неделю (код-ревью, консультации).
-          Иванов и Петрова синхронизированы на 90% — отличная связка.
+          <strong>Петрова - лучший помощник:</strong> помогла команде 4 раза за неделю (код-ревью, консультации).
+          Иванов и Петрова синхронизированы на 90% - отличная связка.
         </p>
         <div className="insight-recommendation secondary">
           <strong>💡 Рекомендация:</strong>

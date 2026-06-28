@@ -17,9 +17,3 @@
   line-height: 1.55;
   box-shadow: inset 0 0 0 1px rgba(181, 198, 246, 0.05);
 }
-
-@media (max-width: 720px) {
-  .architecture-banner {
-    padding: 20px;
-  }
-}

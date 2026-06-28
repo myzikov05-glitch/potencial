@@ -28,3 +28,13 @@ export type TaskColumn = {
   tone: "muted" | "blue" | "green";
   tasks: TaskItem[];
 };
+
+export type AdminView = "dashboard" | "forecasts";
+
+export type ForecastRisk = {
+  tone: "high" | "medium" | "low";
+  title: string;
+  description: string;
+  recommendation: string;
+  source: string;
+};

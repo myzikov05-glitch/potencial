@@ -2,6 +2,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { AdminSession, LoginFormState } from "../../../entities/session/model/types";
 import { ADMIN_STORAGE_KEY } from "../../../shared/config/auth";
 import { achievements, actionItems, taskColumns, workloadCards } from "../model/constants";
+import type { AdminView } from "../model/types";
 import { AchievementsSection } from "./AchievementsSection/AchievementsSection";
 import { ActionPanel } from "./ActionPanel/ActionPanel";
 import { AdminAuthCard } from "./AdminAuthCard/AdminAuthCard";
@@ -11,6 +12,7 @@ import { DashboardBottomNav } from "./DashboardBottomNav/DashboardBottomNav";
 import { DashboardHeader } from "./DashboardHeader/DashboardHeader";
 import { DashboardMetrics } from "./DashboardMetrics/DashboardMetrics";
 import { DashboardScoreCard } from "./DashboardScoreCard/DashboardScoreCard";
+import { ForecastsPage } from "./ForecastsPage/ForecastsPage";
 import { HelpSection } from "./HelpSection/HelpSection";
 import { TaskBoard } from "./TaskBoard/TaskBoard";
 import { WorkloadSection } from "./WorkloadSection/WorkloadSection";
@@ -20,6 +22,10 @@ const initialLoginForm: LoginFormState = {
   username: "admin",
   password: "admin"
 };
+
+function getActiveAdminView(): AdminView {
+  return window.location.hash === "#forecasts" ? "forecasts" : "dashboard";
+}
 
 type AdminPageProps = {
   apiBaseUrl: string;
@@ -33,6 +39,7 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
   const [loginForm, setLoginForm] = useState<LoginFormState>(initialLoginForm);
   const [loginState, setLoginState] = useState<"idle" | "sending" | "error">("idle");
   const [authChecked, setAuthChecked] = useState(false);
+  const [activeView, setActiveView] = useState<AdminView>(getActiveAdminView);
 
   useEffect(() => {
     async function validateExistingSession() {
@@ -61,6 +68,15 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
 
     void validateExistingSession();
   }, [apiBaseUrl, session]);
+
+  useEffect(() => {
+    function handleHashChange() {
+      setActiveView(getActiveAdminView());
+    }
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   async function handleLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -107,17 +123,23 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
     <div className="page-shell admin-dashboard-shell">
       <div className="background-grid" />
       <main className="dashboard-page">
-        <DashboardHeader />
-        <DashboardScoreCard />
-        <DashboardMetrics />
-        <WorkloadSection workloadCards={workloadCards} />
-        <AchievementsSection achievements={achievements} />
-        <AiAnalyticsSection />
-        <ActionPanel actionItems={actionItems} />
-        <HelpSection />
-        <TaskBoard taskColumns={taskColumns} />
+        {activeView === "forecasts" ? (
+          <ForecastsPage />
+        ) : (
+          <>
+            <DashboardHeader />
+            <DashboardScoreCard />
+            <DashboardMetrics />
+            <WorkloadSection workloadCards={workloadCards} />
+            <AchievementsSection achievements={achievements} />
+            <AiAnalyticsSection />
+            <ActionPanel actionItems={actionItems} />
+            <HelpSection />
+            <TaskBoard taskColumns={taskColumns} />
+          </>
+        )}
       </main>
-      <DashboardBottomNav />
+      <DashboardBottomNav activeView={activeView} />
     </div>
   );
 }

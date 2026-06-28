@@ -59,36 +59,3 @@
   font-size: 13px;
   font-weight: 700;
 }
-
-@media (max-width: 900px) {
-  .dashboard-score-head {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .dashboard-score-card {
-    padding: 14px;
-  }
-
-  .dashboard-score strong {
-    font-size: 46px;
-  }
-}
-
-@media (max-width: 560px) {
-  .dashboard-score-card p {
-    font-size: 13px;
-  }
-
-  .dashboard-score-title {
-    font-size: 14px;
-  }
-
-  .dashboard-score strong {
-    font-size: 36px;
-  }
-
-  .dashboard-score span {
-    font-size: 26px;
-  }
-}

@@ -74,7 +74,7 @@
 }
 
 .workload-card-danger strong {
-  color: #ff625d;
+  color: #ef4444;
 }
 
 .status-dot {
@@ -87,7 +87,7 @@
 }
 
 .workload-card-danger .status-dot {
-  background: #ff625d;
+  background: #ef4444;
   box-shadow: 0 0 18px rgba(255, 84, 78, 0.72);
 }
 
