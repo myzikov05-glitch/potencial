@@ -57,19 +57,3 @@
   font-weight: 300;
   line-height: 1.5;
 }
-
-@media (max-width: 1080px) {
-  .audience-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .audience-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .audience-card {
-    padding: 20px;
-  }
-}

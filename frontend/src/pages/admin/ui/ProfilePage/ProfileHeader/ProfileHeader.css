@@ -1,0 +1,36 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  border: 1px solid #464e63;
+  color: #00ff5f;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(0, 255, 95, 0.2), transparent 58%),
+    rgba(72, 95, 83, 0.55);
+}
+
+.profile-header h1,
+.profile-header p {
+  margin: 0;
+}
+
+.profile-header h1 {
+  color: #f1f2f5;
+  font-size: 19px;
+}
+
+.profile-header p {
+  margin-top: 4px;
+  color: #777981;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 400;
+}

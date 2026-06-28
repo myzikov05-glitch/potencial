@@ -1,0 +1,13 @@
+.profile-page {
+  display: grid;
+  gap: 22px;
+  width: min(100%, 640px);
+  margin: 18px auto 0;
+}
+
+@media (max-width: 900px) {
+  .profile-page {
+    width: min(100%, 640px);
+    gap: 20px;
+  }
+}

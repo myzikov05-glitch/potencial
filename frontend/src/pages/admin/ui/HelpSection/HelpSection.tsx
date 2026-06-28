@@ -49,6 +49,14 @@ export function HelpSection({ help }: HelpSectionProps) {
         {help.reviewers.map((name) => (
           <p key={name}>● {name}</p>
         ))}
+        <p className="review-member">
+          <span className="green-circle" />
+          Елена Смирнова
+        </p>
+        <p className="review-member">
+          <span className="green-circle" />
+          Ксения Петрова
+        </p>
       </article>
     </section>
   );

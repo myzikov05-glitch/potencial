@@ -8,7 +8,7 @@
   gap: 8px;
   width: 100%;
   margin: 0 0 16px;
-  padding: 8px 0 8px max(0px, calc((100% - 640px) / 2));
+  padding: 10px 0 10px max(0px, calc((100% - 700px) / 2));
   font-size: 18px;
 }
 
@@ -20,13 +20,13 @@
 .forecast-card,
 .insight-card {
   margin-inline: auto;
-  width: min(100%, 640px);
+  width: min(100%, 700px);
   border: 1px solid rgba(128, 138, 158, 0.25);
   box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
 }
 
 .forecast-card {
-  padding: 16px;
+  padding: 20px;
   border-color: rgba(181, 198, 246, 0.46);
   border-radius: 16px;
   background:
@@ -58,8 +58,8 @@
 
 .forecast-value span {
   color: #d5d6dc;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .forecast-note {
@@ -79,6 +79,7 @@
 .forecast-note span,
 .forecast-note small {
   color: #8f929c;
+  font-weight: 500;
 }
 
 .success-note {
@@ -88,7 +89,7 @@
 
 .success-note strong::before {
   content: "● ";
-  color: #66ff7a;
+  color: #00ff5f;
 }
 
 .risk-note {
@@ -97,7 +98,7 @@
 }
 
 .risk-note strong {
-  color: #ffae39;
+  color: #f59e0b;
 }
 
 .forecast-card > .dashboard-source {
@@ -109,7 +110,7 @@
   display: grid;
   gap: 12px;
   margin-top: 12px;
-  padding: 14px;
+  padding: 16px;
   border-radius: 14px;
   font-size: 12px;
   line-height: 1.48;
@@ -140,25 +141,27 @@
 }
 
 .insight-danger h3 {
-  color: #ff625d;
+  color: #ef4444;
 }
 
 .insight-warning h3 {
-  color: #ffae39;
+  color: #f59e0b;
 }
 
 .insight-success h3 {
-  color: #66ff7a;
+  color: #00ff5f;
 }
 
 .insight-card p {
   color: #d3d4da;
+  font-size: 14px;
 }
 
 .insight-recommendation {
   display: grid;
   gap: 6px;
   padding: 12px;
+  font-size: 14px;
   border: 1px solid rgba(0, 255, 95, 0.34);
   border-radius: 12px;
   background: rgba(0, 255, 95, 0.1);
@@ -172,30 +175,12 @@
 
 .insight-recommendation strong,
 .effect-line strong {
-  color: #66ff7a;
+  color: #00ff5f;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .effect-line {
   color: #8f929c !important;
 }
 
-@media (max-width: 900px) {
-  .forecast-card,
-  .insight-card {
-    padding: 14px;
-  }
-}
-
-@media (max-width: 560px) {
-  .forecast-card h3 {
-    font-size: 14px;
-  }
-
-  .forecast-value span {
-    font-size: 13px;
-  }
-
-  .forecast-value strong {
-    font-size: 26px;
-  }
-}

@@ -2,6 +2,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { AdminSession, LoginFormState } from "../../../entities/session/model/types";
 import { ADMIN_STORAGE_KEY } from "../../../shared/config/auth";
 import { achievements, taskColumns } from "../model/constants";
+import type { AdminView } from "../model/types";
 import { useDashboard } from "../model/useDashboard";
 import { AchievementsSection } from "./AchievementsSection/AchievementsSection";
 import { ActionPanel } from "./ActionPanel/ActionPanel";
@@ -12,7 +13,9 @@ import { DashboardBottomNav } from "./DashboardBottomNav/DashboardBottomNav";
 import { DashboardHeader } from "./DashboardHeader/DashboardHeader";
 import { DashboardMetrics } from "./DashboardMetrics/DashboardMetrics";
 import { DashboardScoreCard } from "./DashboardScoreCard/DashboardScoreCard";
+import { ForecastsPage } from "./ForecastsPage/ForecastsPage";
 import { HelpSection } from "./HelpSection/HelpSection";
+import { ProfilePage } from "./ProfilePage/ProfilePage";
 import { TaskBoard } from "./TaskBoard/TaskBoard";
 import { WorkloadSection } from "./WorkloadSection/WorkloadSection";
 import "./AdminPage.css";
@@ -21,6 +24,18 @@ const initialLoginForm: LoginFormState = {
   username: "admin",
   password: "admin"
 };
+
+function getActiveAdminView(): AdminView {
+  if (window.location.hash === "#profile") {
+    return "profile";
+  }
+
+  if (window.location.hash === "#forecasts") {
+    return "forecasts";
+  }
+
+  return "dashboard";
+}
 
 type AdminPageProps = {
   apiBaseUrl: string;
@@ -34,6 +49,7 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
   const [loginForm, setLoginForm] = useState<LoginFormState>(initialLoginForm);
   const [loginState, setLoginState] = useState<"idle" | "sending" | "error">("idle");
   const [authChecked, setAuthChecked] = useState(false);
+  const [activeView, setActiveView] = useState<AdminView>(getActiveAdminView);
   const dashboard = useDashboard(apiBaseUrl, session?.access_token);
 
   useEffect(() => {
@@ -63,6 +79,15 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
 
     void validateExistingSession();
   }, [apiBaseUrl, session]);
+
+  useEffect(() => {
+    function handleHashChange() {
+      setActiveView(getActiveAdminView());
+    }
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   async function handleLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -105,41 +130,56 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
     );
   }
 
-  if (dashboard.status === "loading") {
+  if (activeView === "dashboard" && dashboard.status === "loading") {
     return <AdminLoading />;
   }
 
-  if (dashboard.status === "error" || !dashboard.data) {
+  if (activeView === "dashboard" && dashboard.status === "error") {
     return (
       <div className="page-shell admin-dashboard-shell">
+        <div className="background-grid" />
         <main className="dashboard-page">
-          <DashboardHeader />
-          <p style={{ padding: "2rem", textAlign: "center" }}>
-            Не удалось загрузить аналитику. Проверьте, что backend запущен, и обновите страницу.
-          </p>
+          <section className="dashboard-section">
+            <h2 className="dashboard-section-title">Не удалось загрузить аналитику</h2>
+          </section>
         </main>
-        <DashboardBottomNav />
+        <DashboardBottomNav activeView={activeView} />
       </div>
     );
   }
 
-  const { score, metrics, workload, action_items, help, ai_summary } = dashboard.data;
+  const dashboardData = dashboard.data;
 
   return (
     <div className="page-shell admin-dashboard-shell">
       <div className="background-grid" />
       <main className="dashboard-page">
-        <DashboardHeader />
-        <DashboardScoreCard score={score.total} />
-        <DashboardMetrics metrics={metrics} />
-        <WorkloadSection workloadCards={workload} />
-        <AchievementsSection achievements={achievements} />
-        <AiAnalyticsSection aiSummary={ai_summary} />
-        <ActionPanel actionItems={action_items.map((item) => item.text)} />
-        <HelpSection help={help} />
-        <TaskBoard taskColumns={taskColumns} />
+        {activeView === "forecasts" ? (
+          <ForecastsPage />
+        ) : activeView === "profile" ? (
+          <ProfilePage />
+        ) : dashboardData ? (
+          <>
+            <DashboardHeader />
+            <DashboardScoreCard score={dashboardData.score.total} />
+            <DashboardMetrics metrics={dashboardData.metrics} />
+            <WorkloadSection workloadCards={dashboardData.workload} />
+            <AchievementsSection achievements={achievements} />
+            <AiAnalyticsSection />
+            <ActionPanel actionItems={dashboardData.action_items.map((item) => item.text)} />
+            <HelpSection help={dashboardData.help} />
+            <TaskBoard taskColumns={taskColumns} />
+          </>
+        ) : (
+          <>
+            <DashboardHeader />
+            <AchievementsSection achievements={achievements} />
+            <AiAnalyticsSection />
+            <TaskBoard taskColumns={taskColumns} />
+          </>
+        )}
       </main>
-      <DashboardBottomNav />
+      <DashboardBottomNav activeView={activeView} />
     </div>
   );
 }

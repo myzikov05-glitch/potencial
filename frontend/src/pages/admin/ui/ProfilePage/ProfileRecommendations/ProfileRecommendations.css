@@ -1,0 +1,62 @@
+.profile-recommendations h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: #18c7ef;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.profile-recommendation-list {
+  display: grid;
+  gap: 12px;
+}
+
+.profile-recommendation-card {
+  padding: 18px;
+  border: 1px solid rgba(128, 138, 158, 0.25);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.profile-recommendation-success {
+  border-color: rgba(0, 255, 95, 0.38);
+  background:
+    radial-gradient(circle at 16% 40%, rgba(0, 255, 95, 0.12), transparent 28%),
+    rgba(12, 13, 20, 0.84);
+}
+
+.profile-recommendation-warning {
+  border-color: rgba(255, 174, 57, 0.42);
+  background:
+    radial-gradient(circle at 18% 50%, rgba(255, 174, 57, 0.12), transparent 30%),
+    rgba(12, 13, 20, 0.84);
+}
+
+.profile-recommendation-neutral {
+  border-color: rgba(181, 198, 246, 0.34);
+}
+
+.profile-recommendation-card h3,
+.profile-recommendation-card p {
+  margin: 0;
+}
+
+.profile-recommendation-card h3 {
+  color: #e1e3e8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-recommendation-card p {
+  margin-top: 10px;
+  color: #8f929c;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+}

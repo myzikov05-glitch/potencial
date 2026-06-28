@@ -29,14 +29,3 @@
 .site-nav a:hover {
   color: #cac9d4;
 }
-
-@media (max-width: 720px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-nav {
-    display: none;
-  }
-}
