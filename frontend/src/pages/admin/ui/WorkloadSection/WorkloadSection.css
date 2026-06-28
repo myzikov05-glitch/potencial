@@ -1,6 +1,6 @@
 .workload-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   justify-items: center;
 }
 
@@ -8,8 +8,8 @@
   position: relative;
   overflow: hidden;
   margin-inline: auto;
-  width: min(100%, 640px);
-  padding: 14px;
+  width: min(100%, 700px);
+  padding: 16px;
   border: 1px solid rgba(128, 138, 158, 0.25);
   border-radius: 14px;
   background:
@@ -39,36 +39,35 @@
 }
 
 .workload-main {
-  gap: 12px;
+  gap: 14px;
 }
 
 .member-avatar {
   display: inline-grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border: 1px solid rgba(197, 206, 224, 0.14);
   border-radius: 50%;
   background: rgba(74, 91, 78, 0.78);
   color: #e9edf0;
-  font-size: 14px;
-  font-weight: 900;
+  font-size: 15px;
+  font-weight: 400;
 }
 
-.workload-card h3,
-.workload-card p {
+.workload-card h3{
   margin: 0;
 }
 
 .workload-card h3 {
   color: #e7e8ec;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .workload-card strong {
   display: block;
   margin-top: 4px;
-  color: #66ff7a;
+  color: #00ff5f;
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 12px;
 }
@@ -78,26 +77,34 @@
 }
 
 .status-dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   margin-left: auto;
   border-radius: 50%;
-  background: #4db55a;
+  background: #00ff5fcc;
   box-shadow: 0 0 18px rgba(80, 255, 110, 0.72);
 }
 
 .workload-card-danger .status-dot {
-  background: #ff625d;
+  background: #ef4444cc;
   box-shadow: 0 0 18px rgba(255, 84, 78, 0.72);
 }
 
-.workload-warning,
-.workload-recommendation {
-  margin-top: 10px;
-  color: #b8b8bf;
-  font-size: 12px;
-  font-weight: 700;
+.workload-warning {
+  margin-top: 16px;
+  color: #71717a;
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1.45;
+}
+
+.workload-recommendation {
+  margin-top: 8px;
+  color: #e4e4e7;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+
 }
 
 .workload-divider {
@@ -108,18 +115,17 @@
 
 .feedback-row {
   justify-content: center;
-  gap: 10px;
   margin-top: 12px;
-  color: #8f929c;
-  font-size: 12px;
-  font-weight: 800;
+  color: #71717a;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .feedback-row button {
   border: 0;
   background: transparent;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   transform-origin: center;
   transition:
     transform 160ms ease,

@@ -46,8 +46,14 @@ export function HelpSection() {
           <CheckSquare size={24} />
           Кто готов взять задачу на ревью
         </h3>
-        <p>● Елена Смирнова</p>
-        <p>● Ксения Петрова</p>
+        <p className="review-member">
+          <span className="green-circle" />
+          Елена Смирнова
+        </p>
+        <p className="review-member">
+          <span className="green-circle" />
+          Ксения Петрова
+        </p>
       </article>
     </section>
   );

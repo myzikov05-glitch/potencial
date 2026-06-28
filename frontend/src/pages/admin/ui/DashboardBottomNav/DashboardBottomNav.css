@@ -34,7 +34,7 @@
 }
 
 .dashboard-bottom-nav a.active {
-  color: #66ff7a;
+  color: #00ff5f;
   text-shadow: 0 0 22px rgba(0, 255, 95, 0.55);
 }
 
@@ -45,7 +45,7 @@
   width: 34px;
   height: 3px;
   border-radius: 999px;
-  background: #66ff7a;
+  background: #00ff5f;
   box-shadow: 0 0 28px rgba(0, 255, 95, 0.9);
 }
 

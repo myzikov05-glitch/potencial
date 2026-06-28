@@ -7,7 +7,7 @@
 .dashboard-header {
   justify-content: space-between;
   gap: 14px;
-  padding: 0 max(0px, calc((100% - 640px) / 2));
+  padding: 0 max(0px, calc((100% - 700px) / 2));
   margin-bottom: 18px;
 }
 
@@ -18,13 +18,12 @@
 .dashboard-team-icon {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(0, 255, 95, 0.32);
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(111, 126, 117, 0.32);
   border-radius: 14px;
-  color: #66ff7a;
+  color: #00ff5f;
   background: rgba(55, 95, 64, 0.7);
-  box-shadow: 0 0 28px rgba(0, 255, 95, 0.18);
 }
 
 .dashboard-team h1,
@@ -33,15 +32,15 @@
 }
 
 .dashboard-team h1 {
-  font-size: 19px;
-  letter-spacing: -0.04em;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .dashboard-team p {
   margin-top: 4px;
-  color: #8f929c;
-  font-size: 13px;
-  font-weight: 700;
+  color: #71717a;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .dashboard-telegram {
@@ -50,14 +49,14 @@
   gap: 8px;
   min-height: 36px;
   padding: 0 13px;
-  border: 1px solid rgba(6, 181, 224, 0.55);
+  border: 1px solid #06b5e04d;
   border-radius: 12px;
   background: rgba(6, 181, 224, 0.16);
-  color: #58c6f0;
+  color: #06b5e0;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 0 26px rgba(6, 181, 224, 0.12);
+  box-shadow: 0 0 26px #06b5e033;
 }
 
 @media (max-width: 900px) {

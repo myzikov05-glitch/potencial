@@ -1,7 +1,7 @@
 .dashboard-score-card {
   margin-inline: auto;
-  width: min(100%, 640px);
-  padding: 18px;
+  width: min(100%, 700px);
+  padding: 22px;
   border: 1px solid rgba(0, 255, 95, 0.34);
   border-radius: 16px;
   background:
@@ -23,9 +23,9 @@
 
 .dashboard-score-title {
   gap: 8px;
-  color: #66ff7a;
+  color: #00ff5f;
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -37,8 +37,8 @@
 }
 
 .dashboard-score {
-  margin-top: 14px;
-  color: #66ff7a;
+  margin-top: 16px;
+  color: #00ff5f;
 }
 
 .dashboard-score strong {
@@ -54,10 +54,10 @@
 }
 
 .dashboard-score-card p {
-  margin: 8px 0 0;
-  color: #c4c5cb;
-  font-size: 13px;
-  font-weight: 700;
+  margin: 10px 0 0;
+  color: #e4e4e7;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 @media (max-width: 900px) {
