@@ -194,3 +194,27 @@
   font-size: 13px;
   font-weight: 500;
 }
+
+.task-help-notification {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 12px 10px;
+  border: 1px solid rgba(0, 255, 95, 0.42);
+  border-radius: 14px;
+  background: rgba(0, 255, 95, 0.12);
+  box-shadow: 0 0 0 1px rgba(0, 255, 95, 0.08);
+}
+
+.task-help-notification strong {
+  color: #f1f2f5;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.task-help-notification p {
+  margin: 0;
+  color: #8f929c;
+  font-size: 10px;
+  font-weight: 400;
+}

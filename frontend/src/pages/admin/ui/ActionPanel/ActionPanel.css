@@ -74,3 +74,13 @@
   font-size: 13px;
   font-weight: 400;
 }
+
+.action-assigned-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: #00ff5f;
+  font-size: 13px;
+  font-weight: 400;
+}

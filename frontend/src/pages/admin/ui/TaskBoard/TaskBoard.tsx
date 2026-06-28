@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { HandHeart } from "lucide-react";
 import { TaskColumn } from "../../model/types";
 import "./TaskBoard.css";
@@ -7,6 +8,8 @@ type TaskBoardProps = {
 };
 
 export function TaskBoard({ taskColumns }: TaskBoardProps) {
+  const [notifiedTaskTitle, setNotifiedTaskTitle] = useState<string | null>(null);
+
   return (
     <section className="task-board" id="tasks">
       <h2>Доска задач</h2>
@@ -34,10 +37,16 @@ export function TaskBoard({ taskColumns }: TaskBoardProps) {
                     <small>{task.progress}</small>
                   </div>
                 )}
-                <button type="button">
+                <button type="button" onClick={() => setNotifiedTaskTitle(task.title)}>
                   <HandHeart size={14} />
                   Запросить помощь
                 </button>
+                {notifiedTaskTitle === task.title && (
+                  <div className="task-help-notification">
+                    <strong>✅ Уведомление отправлено</strong>
+                    <p>Кто может помочь: у Ксении Петровой свободных 15 часов, она уже делала похожее</p>
+                  </div>
+                )}
               </article>
             ))}
           </div>
