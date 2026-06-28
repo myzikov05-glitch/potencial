@@ -1,0 +1,56 @@
+.settings-page {
+  display: grid;
+  gap: 28px;
+  width: min(100%, 640px);
+  margin: 18px auto 0;
+}
+
+.settings-header h1,
+.settings-header p {
+  margin: 0;
+}
+
+.settings-header h1 {
+  color: #f1f2f5;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.settings-header p {
+  margin-top: 8px;
+  color: #777981;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.settings-section {
+  display: grid;
+  gap: 14px;
+}
+
+.settings-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #8f929c;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.settings-footer {
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid rgba(128, 138, 158, 0.14);
+  border-radius: 18px;
+  background: rgba(7, 8, 13, 0.6);
+  color: #777981;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.settings-footer span {
+  color: #00ff5f;
+}

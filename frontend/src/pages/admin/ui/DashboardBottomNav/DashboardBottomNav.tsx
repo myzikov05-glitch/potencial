@@ -21,7 +21,7 @@ export function DashboardBottomNav({ activeView }: DashboardBottomNavProps) {
         <TrendingUp size={28} />
         <span>Прогнозы</span>
       </a>
-      <a href="/admin#settings">
+      <a className={activeView === "settings" ? "active" : undefined} href="/admin#settings">
         <Settings size={28} />
         <span>Настройки</span>
       </a>

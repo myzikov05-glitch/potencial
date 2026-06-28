@@ -1,0 +1,86 @@
+.settings-plan-card {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid rgba(181, 198, 246, 0.34);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.settings-plan-head,
+.settings-year-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.settings-plan-head span,
+.settings-year-card span {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.settings-plan-head strong,
+.settings-year-card strong {
+  color: #bdc9ff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.settings-plan-head small,
+.settings-year-card small {
+  color: #8f929c;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.settings-plan-head b {
+  color: #bdc9ff;
+  font-size: 28px;
+  white-space: nowrap;
+}
+
+.settings-year-card {
+  padding: 14px;
+  border: 1px solid rgba(0, 255, 95, 0.34);
+  border-radius: 12px;
+  background: rgba(0, 255, 95, 0.1);
+}
+
+.settings-year-card strong,
+.settings-year-card b {
+  color: #00ff5f;
+}
+
+.settings-year-card b {
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.settings-subscription-button,
+.settings-year-button {
+  min-height: 46px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.settings-subscription-button {
+  border: 1px solid rgba(181, 198, 246, 0.34);
+  background: rgba(181, 198, 246, 0.18);
+  color: #bdc9ff;
+  font-weight: 500;
+}
+
+.settings-year-button {
+  border: 1px solid rgba(0, 255, 95, 0.4);
+  background: rgba(0, 255, 95, 0.2);
+  color: #00ff5f;
+  font-weight: 500;
+}

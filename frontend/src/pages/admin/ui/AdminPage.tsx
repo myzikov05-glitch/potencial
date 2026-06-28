@@ -16,6 +16,7 @@ import { DashboardScoreCard } from "./DashboardScoreCard/DashboardScoreCard";
 import { ForecastsPage } from "./ForecastsPage/ForecastsPage";
 import { HelpSection } from "./HelpSection/HelpSection";
 import { ProfilePage } from "./ProfilePage/ProfilePage";
+import { SettingsPage } from "./SettingsPage/SettingsPage";
 import { TaskBoard } from "./TaskBoard/TaskBoard";
 import { WorkloadSection } from "./WorkloadSection/WorkloadSection";
 import "./AdminPage.css";
@@ -32,6 +33,10 @@ function getActiveAdminView(): AdminView {
 
   if (window.location.hash === "#forecasts") {
     return "forecasts";
+  }
+
+  if (window.location.hash === "#settings") {
+    return "settings";
   }
 
   return "dashboard";
@@ -139,7 +144,7 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
       <div className="page-shell admin-dashboard-shell">
         <div className="background-grid" />
         <main className="dashboard-page">
-          <section className="dashboard-section">
+          <section className="dashboard-section dashboard-error-section">
             <h2 className="dashboard-section-title">Не удалось загрузить аналитику</h2>
           </section>
         </main>
@@ -158,6 +163,8 @@ export function AdminPage({ apiBaseUrl }: AdminPageProps) {
           <ForecastsPage />
         ) : activeView === "profile" ? (
           <ProfilePage />
+        ) : activeView === "settings" ? (
+          <SettingsPage />
         ) : dashboardData ? (
           <>
             <DashboardHeader />

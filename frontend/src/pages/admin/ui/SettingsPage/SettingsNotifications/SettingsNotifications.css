@@ -1,0 +1,71 @@
+.settings-notifications-card {
+  padding: 0 18px;
+  border: 1px solid rgba(128, 138, 158, 0.25);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.settings-notification-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 76px;
+  padding: 16px 0;
+}
+
+.settings-notification-row + .settings-notification-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.settings-notification-row span {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.settings-notification-row strong {
+  color: #f1f2f5;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.settings-notification-row small {
+  color: #8f929c;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.settings-toggle {
+  position: relative;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 30px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(128, 138, 158, 0.3);
+  cursor: pointer;
+}
+
+.settings-toggle span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #05060a;
+}
+
+.settings-toggle-on {
+  background: #00ff5f;
+  box-shadow: 0 0 22px rgba(0, 255, 95, 0.5);
+}
+
+.settings-toggle-on span {
+  right: 5px;
+  left: auto;
+}

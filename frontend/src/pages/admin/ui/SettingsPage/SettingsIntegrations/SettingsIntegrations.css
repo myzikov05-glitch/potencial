@@ -1,0 +1,62 @@
+.settings-integration-list {
+  display: grid;
+  gap: 12px;
+}
+
+.settings-integration-card {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 74px;
+  padding: 16px 18px;
+  border: 1px solid rgba(128, 138, 158, 0.25);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    rgba(12, 13, 20, 0.84);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28);
+}
+
+.settings-integration-icon {
+  font-size: 24px;
+}
+
+.settings-integration-copy {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.settings-integration-copy strong {
+  color: #f1f2f5;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.settings-integration-copy small {
+  color: #8f929c;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.settings-connected {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00ff5f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.settings-integration-card button {
+  min-width: 112px;
+  min-height: 34px;
+  border: 1px solid rgba(181, 198, 246, 0.34);
+  border-radius: 999px;
+  background: rgba(181, 198, 246, 0.16);
+  color: #bdc9ff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
